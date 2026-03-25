@@ -10,12 +10,14 @@ export const requireAuth = (req: Request, res: Response, next: NextFunction) => 
     }
 
     const token = authHeader.split(' ')[1];
-    const secret = process.env.JWT_SECRET || 'fallback_secret_do_not_use_in_prod';
-    
-    // Verify token
+    const secret = process.env.JWT_SECRET;
+
+    if (!secret) {
+      return res.status(500).json({ success: false, message: 'JWT secret is not configured' });
+    }
+
     const decoded = jwt.verify(token, secret) as JwtPayload;
     
-    // Attach user payload to request (typed via src/types/express.d.ts)
     req.user = decoded;
     
     next();

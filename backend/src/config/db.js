@@ -18,9 +18,6 @@ pool.on('error', (err) => {
   process.exit(1);
 });
 
-/**
- * Test the database connection
- */
 const testConnection = async () => {
   try {
     const client = await pool.connect();

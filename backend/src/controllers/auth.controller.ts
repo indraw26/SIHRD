@@ -7,7 +7,7 @@ export const AuthController = {
       const { username, email, password, role_id } = req.body;
 
       if (!username || !email || !password) {
-        return res.status(400).json({ success: false, message: 'Missing required fields' });
+        return res.status(400).json({ success: false, message: 'fill the required fields!' });
       }
 
       const result = await AuthService.register({ username, email, password, role_id });
@@ -22,7 +22,7 @@ export const AuthController = {
       const { email, password } = req.body;
 
       if (!email || !password) {
-        return res.status(400).json({ success: false, message: 'Missing email or password' });
+        return res.status(400).json({ success: false, message: 'email or password incorrect!' });
       }
 
       const result = await AuthService.login({ email, password });
@@ -34,13 +34,10 @@ export const AuthController = {
 
   async getMe(req: Request, res: Response) {
     try {
-      // req.user is set by authMiddleware
       if (!req.user) {
-        return res.status(401).json({ success: false, message: 'Not authenticated' });
+        return res.status(401).json({ success: false, message: 'Not Found!' });
       }
       
-      // Could fetch fresh user data from DB here using UserModel.findById(req.user.userId)
-      // For now just returning the token payload
       res.status(200).json({ success: true, data: { user: req.user } });
     } catch (error: any) {
       res.status(500).json({ success: false, message: error.message });
