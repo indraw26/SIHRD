@@ -18,6 +18,10 @@ router.get('/health', (req, res) => {
 // Example:
 // const userRoutes = require('./userRoutes');
 // router.use('/users', userRoutes);
+
+// Note: authRoutes is TS export default so we need .default
+const authRoutes = require('./auth.routes').default;
+router.use('/auth', authRoutes);
 // ========================
 
 module.exports = router;

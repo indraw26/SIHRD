@@ -12,6 +12,10 @@ const env = {
   DB_NAME: process.env.DB_NAME || 'sihrd_db',
   DB_USER: process.env.DB_USER || 'postgres',
   DB_PASSWORD: process.env.DB_PASSWORD || '',
+
+  // JWT
+  JWT_SECRET: process.env.JWT_SECRET || 'super_secret_jwt_key_123!@#',
+  JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '7d',
 };
 
 module.exports = env;
