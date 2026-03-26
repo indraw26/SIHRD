@@ -15,15 +15,15 @@ const services = [
 const HomePage = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative h-[85vh] min-h-[600px] flex items-center mt-[-80px]">
+    <section className="relative h-screen min-h-screen flex items-center -mt-20">
       <img src={heroImg} alt="Car repair workshop" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 bg-black/60" />
       <div className="container relative z-10 pt-20">
         <div className="max-w-2xl animate-fade-in">
-          <p className="text-orange-500 font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">
+          <p className="text-orange-500 font-semibold text-xs md:text-sm uppercase tracking-widest mb-4">
             Expert Auto Care
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6">
             Precision Repair.<br />Trusted Service.
           </h1>
           <p className="text-white/80 text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
@@ -45,7 +45,7 @@ const HomePage = () => (
     <section id="services" className="py-24 bg-slate-50">
       <div className="container">
         <div className="text-center mb-16">
-          <p className="text-orange-500 font-semibold text-xs uppercase tracking-[0.2em] mb-3">What We Do</p>
+          <p className="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-3">What We Do</p>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900">Our Services</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -55,7 +55,7 @@ const HomePage = () => (
                 <s.icon className="w-6 h-6 text-orange-500" />
               </div>
               <h3 className="font-bold text-xl text-gray-900 mb-3">{s.title}</h3>
-              <p className="text-[15px] text-gray-500 leading-relaxed">{s.desc}</p>
+              <p className="text-base text-gray-500 leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -66,7 +66,7 @@ const HomePage = () => (
     <section className="py-24 bg-slate-50">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative rounded-2xl overflow-hidden min-h-[400px] group cursor-pointer">
+          <div className="relative rounded-2xl overflow-hidden min-h-96 group cursor-pointer">
             <img src={sparepartsImg} alt="Car spare parts" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={1280} height={960} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             <div className="relative z-10 p-10 flex flex-col justify-end h-full">
@@ -74,7 +74,7 @@ const HomePage = () => (
               <p className="text-white/80">Genuine OEM and premium aftermarket components for every make and model.</p>
             </div>
           </div>
-          <div className="relative rounded-2xl overflow-hidden min-h-[400px] group cursor-pointer">
+          <div className="relative rounded-2xl overflow-hidden min-h-96 group cursor-pointer">
             <img src={garageImg} alt="Professional auto garage" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={1280} height={960} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             <div className="relative z-10 p-10 flex flex-col justify-end h-full">

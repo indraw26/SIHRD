@@ -73,7 +73,7 @@ const CareerPage = () => {
               >
                 <div className="flex-1">
                   <h2 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">{job.title}</h2>
-                  <p className="text-gray-500 text-[15px] leading-relaxed mb-6">
+                  <p className="text-gray-500 text-base leading-relaxed mb-6">
                     {job.description}
                   </p>
 
@@ -93,7 +93,7 @@ const CareerPage = () => {
                   </div>
                 </div>
 
-                <button className="w-full bg-orange-500 text-white font-semibold py-3.5 rounded-xl hover:bg-orange-600 transition-colors hover:shadow-md active:scale-[0.98]">
+                <button className="w-full bg-orange-500 text-white font-semibold py-3.5 rounded-xl hover:bg-orange-600 transition-colors hover:shadow-md active:scale-95 cursor-pointer">
                   Apply Now
                 </button>
               </div>

@@ -34,21 +34,24 @@ const Header = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button className="flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors">
+                <button
+                  onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors cursor-pointer ${openDropdown === item.label ? 'text-orange-500' : 'text-white/80 hover:text-white'
+                    }`}
+                >
                   {item.label}
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {openDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-4">
-                    <div className="bg-white rounded-lg border shadow-xl min-w-[200px] py-2">
+                  <div className="absolute top-full left-0 pt-6">
+                    <div className="bg-white rounded-2xl shadow-xl min-w-60 p-6 flex flex-col gap-4">
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
                           to={child.href}
-                          className="block px-4 py-2.5 text-sm text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors"
+                          onClick={() => setOpenDropdown(null)}
+                          className="text-base font-medium text-gray-700 hover:text-orange-500 transition-colors"
                         >
                           {child.label}
                         </Link>
