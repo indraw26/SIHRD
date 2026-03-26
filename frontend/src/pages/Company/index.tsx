@@ -20,7 +20,7 @@ const HomePage = () => (
       <div className="absolute inset-0 bg-black/60" />
       <div className="container relative z-10 pt-20">
         <div className="max-w-2xl animate-fade-in">
-          <p className="text-[#f97316] font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">
+          <p className="text-orange-500 font-semibold text-xs md:text-sm uppercase tracking-[0.2em] mb-4">
             Expert Auto Care
           </p>
           <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6">
@@ -30,7 +30,7 @@ const HomePage = () => (
             From routine maintenance to complex repairs &mdash; our certified team keeps your vehicle running at peak performance.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/about" className="px-8 py-3.5 bg-[#f97316] text-white font-semibold rounded-lg hover:bg-[#ea580c] transition-colors">
+            <Link to="/about" className="px-8 py-3.5 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
               Learn More
             </Link>
             <Link to="/login" className="px-8 py-3.5 border hover:border-white border-white/50 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
@@ -42,17 +42,17 @@ const HomePage = () => (
     </section>
 
     {/* Services */}
-    <section id="services" className="py-24 bg-[#f8f9fa]">
+    <section id="services" className="py-24 bg-slate-50">
       <div className="container">
         <div className="text-center mb-16">
-          <p className="text-[#f97316] font-semibold text-xs uppercase tracking-[0.2em] mb-3">What We Do</p>
+          <p className="text-orange-500 font-semibold text-xs uppercase tracking-[0.2em] mb-3">What We Do</p>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900">Our Services</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s) => (
-            <div key={s.title} className="bg-white border hover:border-[#f97316]/20 border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-[#fff4ed] flex items-center justify-center mb-6">
-                <s.icon className="w-6 h-6 text-[#f97316]" />
+            <div key={s.title} className="bg-white border hover:border-orange-500/20 border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center mb-6">
+                <s.icon className="w-6 h-6 text-orange-500" />
               </div>
               <h3 className="font-bold text-xl text-gray-900 mb-3">{s.title}</h3>
               <p className="text-[15px] text-gray-500 leading-relaxed">{s.desc}</p>
@@ -63,7 +63,7 @@ const HomePage = () => (
     </section>
 
     {/* CTA Grid */}
-    <section className="py-24 bg-[#f8f9fa]">
+    <section className="py-24 bg-slate-50">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="relative rounded-2xl overflow-hidden min-h-[400px] group cursor-pointer">

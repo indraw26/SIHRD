@@ -22,10 +22,10 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#232733]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-800">
       <div className="container flex items-center justify-between h-20">
         <Link to="/" className="text-xl md:text-2xl font-bold tracking-tight text-white">
-          Auto<span className="text-[#f97316]">Fix</span>Pro
+          Auto<span className="text-orange-500">Fix</span>Pro
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -48,7 +48,7 @@ const Header = () => {
                         <Link
                           key={child.label}
                           to={child.href}
-                          className="block px-4 py-2.5 text-sm text-gray-800 hover:bg-orange-50 hover:text-[#f97316] transition-colors"
+                          className="block px-4 py-2.5 text-sm text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -69,7 +69,7 @@ const Header = () => {
           )}
           <Link
             to="/login"
-            className="px-6 py-2.5 bg-[#f97316] text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
+            className="px-6 py-2.5 bg-orange-500 text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
           >
             Login
           </Link>
@@ -84,7 +84,7 @@ const Header = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-[#232733] border-t border-white/10 pb-4">
+        <div className="md:hidden bg-slate-800 border-t border-white/10 pb-4">
           {navItems.map((item) =>
             item.children ? (
               <div key={item.label}>
@@ -102,7 +102,7 @@ const Header = () => {
                         key={child.label}
                         to={child.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block py-2.5 text-sm text-white/70 hover:text-[#f97316]"
+                        className="block py-2.5 text-sm text-white/70 hover:text-orange-500"
                       >
                         {child.label}
                       </Link>
@@ -115,7 +115,7 @@ const Header = () => {
                 key={item.label}
                 to={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-6 py-3 text-sm font-medium text-white/80 hover:text-[#f97316]"
+                className="block px-6 py-3 text-sm font-medium text-white/80 hover:text-orange-500"
               >
                 {item.label}
               </Link>
@@ -125,7 +125,7 @@ const Header = () => {
             <Link
               to="/login"
               onClick={() => setMobileOpen(false)}
-              className="block text-center px-5 py-2.5 bg-[#f97316] text-white text-sm font-semibold rounded-lg"
+              className="block text-center px-5 py-2.5 bg-orange-500 text-white text-sm font-semibold rounded-lg"
             >
               Login
             </Link>
