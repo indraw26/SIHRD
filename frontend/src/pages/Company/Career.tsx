@@ -51,7 +51,6 @@ const CareerPage = () => {
     <Layout>
       <div className="bg-slate-50 min-h-screen py-24">
         <div className="container mx-auto px-4 max-w-6xl">
-          {/* Header Section */}
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <h3 className="text-orange-500 font-bold text-sm uppercase tracking-widest mb-4">
               CAREERS
@@ -64,7 +63,6 @@ const CareerPage = () => {
             </p>
           </div>
 
-          {/* Job Listings Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {jobs.map((job, index) => (
               <div

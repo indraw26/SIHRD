@@ -14,7 +14,6 @@ const services = [
 
 const HomePage = () => (
   <Layout>
-    {/* Hero */}
     <section className="relative h-screen min-h-screen flex items-center -mt-20">
       <img src={heroImg} alt="Car repair workshop" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 bg-black/60" />
@@ -41,7 +40,6 @@ const HomePage = () => (
       </div>
     </section>
 
-    {/* Services */}
     <section id="services" className="py-24 bg-slate-50">
       <div className="container">
         <div className="text-center mb-16">
@@ -62,7 +60,6 @@ const HomePage = () => (
       </div>
     </section>
 
-    {/* CTA Grid */}
     <section className="py-24 bg-slate-50">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
